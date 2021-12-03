@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555169F74E59BB61551E31E4 /* Pods_Xnote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12E692E4F1FD5CA7B3CFFB4 /* Pods_Xnote.framework */; };
+		ED27DED42759569D00D673D1 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED32759569D00D673D1 /* NameViewController.swift */; };
+		ED27DED827595DEE00D673D1 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED727595DEE00D673D1 /* AuthViewController.swift */; };
+		ED27DEDA2759821900D673D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED92759821900D673D1 /* HomeViewController.swift */; };
 		EDD6302627589F60005C9C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302527589F60005C9C60 /* AppDelegate.swift */; };
 		EDD6302827589F60005C9C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302727589F60005C9C60 /* SceneDelegate.swift */; };
 		EDD6302A27589F60005C9C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302927589F60005C9C60 /* ViewController.swift */; };
@@ -14,9 +18,17 @@
 		EDD6303027589F60005C9C60 /* Xnote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302E27589F60005C9C60 /* Xnote.xcdatamodeld */; };
 		EDD6303227589F63005C9C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD6303127589F63005C9C60 /* Assets.xcassets */; };
 		EDD6303527589F63005C9C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD6303327589F63005C9C60 /* LaunchScreen.storyboard */; };
+		EDF011C22759D79D003A5477 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF011C12759D79D003A5477 /* SideMenu.swift */; };
+		EDF011C42759D7FA003A5477 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF011C32759D7FA003A5477 /* InfoViewController.swift */; };
+		EDF011C62759D897003A5477 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF011C52759D897003A5477 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67E813010885D4D062F51A8F /* Pods-Xnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xnote.debug.xcconfig"; path = "Target Support Files/Pods-Xnote/Pods-Xnote.debug.xcconfig"; sourceTree = "<group>"; };
+		B12E692E4F1FD5CA7B3CFFB4 /* Pods_Xnote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xnote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED27DED32759569D00D673D1 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		ED27DED727595DEE00D673D1 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		ED27DED92759821900D673D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EDD6302227589F60005C9C60 /* Xnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD6302527589F60005C9C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD6302727589F60005C9C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +38,10 @@
 		EDD6303127589F63005C9C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDD6303427589F63005C9C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDD6303627589F63005C9C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF011C12759D79D003A5477 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		EDF011C32759D7FA003A5477 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		EDF011C52759D897003A5477 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		F5D98BDBC181E77ED75F4058 /* Pods-Xnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xnote.release.xcconfig"; path = "Target Support Files/Pods-Xnote/Pods-Xnote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555169F74E59BB61551E31E4 /* Pods_Xnote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62052DF446C8DE4B3D426CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B12E692E4F1FD5CA7B3CFFB4 /* Pods_Xnote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADF49941B959DF6007F36912 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67E813010885D4D062F51A8F /* Pods-Xnote.debug.xcconfig */,
+				F5D98BDBC181E77ED75F4058 /* Pods-Xnote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EDD6301927589F60005C9C60 = {
 			isa = PBXGroup;
 			children = (
 				EDD6302427589F60005C9C60 /* Xnote */,
 				EDD6302327589F60005C9C60 /* Products */,
+				ADF49941B959DF6007F36912 /* Pods */,
+				62052DF446C8DE4B3D426CFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +102,12 @@
 				EDD6303327589F63005C9C60 /* LaunchScreen.storyboard */,
 				EDD6303627589F63005C9C60 /* Info.plist */,
 				EDD6302E27589F60005C9C60 /* Xnote.xcdatamodeld */,
+				ED27DED32759569D00D673D1 /* NameViewController.swift */,
+				ED27DED727595DEE00D673D1 /* AuthViewController.swift */,
+				ED27DED92759821900D673D1 /* HomeViewController.swift */,
+				EDF011C12759D79D003A5477 /* SideMenu.swift */,
+				EDF011C32759D7FA003A5477 /* InfoViewController.swift */,
+				EDF011C52759D897003A5477 /* SettingViewController.swift */,
 			);
 			path = Xnote;
 			sourceTree = "<group>";
@@ -77,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD6303927589F63005C9C60 /* Build configuration list for PBXNativeTarget "Xnote" */;
 			buildPhases = (
+				89FF0C788739CA932A5806A9 /* [CP] Check Pods Manifest.lock */,
 				EDD6301E27589F60005C9C60 /* Sources */,
 				EDD6301F27589F60005C9C60 /* Frameworks */,
 				EDD6302027589F60005C9C60 /* Resources */,
+				D4B1AD9E86D7AB496B3F4FB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +180,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89FF0C788739CA932A5806A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xnote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4B1AD9E86D7AB496B3F4FB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDD6301E27589F60005C9C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF011C42759D7FA003A5477 /* InfoViewController.swift in Sources */,
 				EDD6303027589F60005C9C60 /* Xnote.xcdatamodeld in Sources */,
 				EDD6302A27589F60005C9C60 /* ViewController.swift in Sources */,
 				EDD6302627589F60005C9C60 /* AppDelegate.swift in Sources */,
+				EDF011C22759D79D003A5477 /* SideMenu.swift in Sources */,
+				EDF011C62759D897003A5477 /* SettingViewController.swift in Sources */,
 				EDD6302827589F60005C9C60 /* SceneDelegate.swift in Sources */,
+				ED27DED827595DEE00D673D1 /* AuthViewController.swift in Sources */,
+				ED27DEDA2759821900D673D1 /* HomeViewController.swift in Sources */,
+				ED27DED42759569D00D673D1 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +378,7 @@
 		};
 		EDD6303A27589F63005C9C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E813010885D4D062F51A8F /* Pods-Xnote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +396,7 @@
 		};
 		EDD6303B27589F63005C9C60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5D98BDBC181E77ED75F4058 /* Pods-Xnote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

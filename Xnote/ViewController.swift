@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var btnComenzar: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        btnComenzar.layer.cornerRadius = 30.0
     }
-
+    
 
 }
 
