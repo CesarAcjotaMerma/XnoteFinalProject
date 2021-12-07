@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		555169F74E59BB61551E31E4 /* Pods_Xnote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12E692E4F1FD5CA7B3CFFB4 /* Pods_Xnote.framework */; };
+		ED0ED88A275C3EA300220B74 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0ED889275C3EA300220B74 /* CollectionTableViewCell.swift */; };
 		ED27DED42759569D00D673D1 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED32759569D00D673D1 /* NameViewController.swift */; };
 		ED27DED827595DEE00D673D1 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED727595DEE00D673D1 /* AuthViewController.swift */; };
 		ED27DEDA2759821900D673D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27DED92759821900D673D1 /* HomeViewController.swift */; };
+		ED9AD960275E4295005E7A1A /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AD95F275E4295005E7A1A /* Usuarios.swift */; };
+		ED9AD962275E42CA005E7A1A /* Categorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AD961275E42CA005E7A1A /* Categorias.swift */; };
+		ED9AFB2B275D20050067428C /* ListaTareaPendiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AFB2A275D20050067428C /* ListaTareaPendiente.swift */; };
+		ED9AFB2D275D26A90067428C /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AFB2C275D26A90067428C /* TableCollectionViewCell.swift */; };
+		ED9AFB2F275D29730067428C /* TableHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AFB2E275D29730067428C /* TableHomeViewController.swift */; };
+		ED9AFB31275D30420067428C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AFB30275D30420067428C /* Models.swift */; };
+		EDA99168275B373F00227C3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDA99167275B373F00227C3A /* GoogleService-Info.plist */; };
 		EDD6302627589F60005C9C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302527589F60005C9C60 /* AppDelegate.swift */; };
 		EDD6302827589F60005C9C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302727589F60005C9C60 /* SceneDelegate.swift */; };
 		EDD6302A27589F60005C9C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6302927589F60005C9C60 /* ViewController.swift */; };
@@ -26,9 +34,17 @@
 /* Begin PBXFileReference section */
 		67E813010885D4D062F51A8F /* Pods-Xnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xnote.debug.xcconfig"; path = "Target Support Files/Pods-Xnote/Pods-Xnote.debug.xcconfig"; sourceTree = "<group>"; };
 		B12E692E4F1FD5CA7B3CFFB4 /* Pods_Xnote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xnote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0ED889275C3EA300220B74 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		ED27DED32759569D00D673D1 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		ED27DED727595DEE00D673D1 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		ED27DED92759821900D673D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ED9AD95F275E4295005E7A1A /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		ED9AD961275E42CA005E7A1A /* Categorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categorias.swift; sourceTree = "<group>"; };
+		ED9AFB2A275D20050067428C /* ListaTareaPendiente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareaPendiente.swift; sourceTree = "<group>"; };
+		ED9AFB2C275D26A90067428C /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED9AFB2E275D29730067428C /* TableHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHomeViewController.swift; sourceTree = "<group>"; };
+		ED9AFB30275D30420067428C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		EDA99167275B373F00227C3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDD6302227589F60005C9C60 /* Xnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD6302527589F60005C9C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD6302727589F60005C9C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +89,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED0ED88B275C3EC000220B74 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED0ED889275C3EA300220B74 /* CollectionTableViewCell.swift */,
+				ED9AFB2A275D20050067428C /* ListaTareaPendiente.swift */,
+				ED9AFB2C275D26A90067428C /* TableCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED9AD95D275E4221005E7A1A /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				EDF011C12759D79D003A5477 /* SideMenu.swift */,
+				ED9AD95F275E4295005E7A1A /* Usuarios.swift */,
+				ED9AD961275E42CA005E7A1A /* Categorias.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		ED9AD95E275E422E005E7A1A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6302927589F60005C9C60 /* ViewController.swift */,
+				ED27DED32759569D00D673D1 /* NameViewController.swift */,
+				ED27DED727595DEE00D673D1 /* AuthViewController.swift */,
+				ED27DED92759821900D673D1 /* HomeViewController.swift */,
+				EDF011C32759D7FA003A5477 /* InfoViewController.swift */,
+				EDF011C52759D897003A5477 /* SettingViewController.swift */,
+				ED9AFB2E275D29730067428C /* TableHomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		EDD6301927589F60005C9C60 = {
 			isa = PBXGroup;
 			children = (
@@ -94,20 +144,18 @@
 		EDD6302427589F60005C9C60 /* Xnote */ = {
 			isa = PBXGroup;
 			children = (
+				ED9AD95E275E422E005E7A1A /* ViewControllers */,
+				ED9AD95D275E4221005E7A1A /* Modelos */,
+				ED0ED88B275C3EC000220B74 /* Cells */,
+				EDA99167275B373F00227C3A /* GoogleService-Info.plist */,
 				EDD6302527589F60005C9C60 /* AppDelegate.swift */,
 				EDD6302727589F60005C9C60 /* SceneDelegate.swift */,
-				EDD6302927589F60005C9C60 /* ViewController.swift */,
 				EDD6302B27589F60005C9C60 /* Main.storyboard */,
 				EDD6303127589F63005C9C60 /* Assets.xcassets */,
 				EDD6303327589F63005C9C60 /* LaunchScreen.storyboard */,
 				EDD6303627589F63005C9C60 /* Info.plist */,
 				EDD6302E27589F60005C9C60 /* Xnote.xcdatamodeld */,
-				ED27DED32759569D00D673D1 /* NameViewController.swift */,
-				ED27DED727595DEE00D673D1 /* AuthViewController.swift */,
-				ED27DED92759821900D673D1 /* HomeViewController.swift */,
-				EDF011C12759D79D003A5477 /* SideMenu.swift */,
-				EDF011C32759D7FA003A5477 /* InfoViewController.swift */,
-				EDF011C52759D897003A5477 /* SettingViewController.swift */,
+				ED9AFB30275D30420067428C /* Models.swift */,
 			);
 			path = Xnote;
 			sourceTree = "<group>";
@@ -124,6 +172,7 @@
 				EDD6301F27589F60005C9C60 /* Frameworks */,
 				EDD6302027589F60005C9C60 /* Resources */,
 				D4B1AD9E86D7AB496B3F4FB4 /* [CP] Embed Pods Frameworks */,
+				985885EC67A49A0841999F30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD6303527589F63005C9C60 /* LaunchScreen.storyboard in Resources */,
+				EDA99168275B373F00227C3A /* GoogleService-Info.plist in Resources */,
 				EDD6303227589F63005C9C60 /* Assets.xcassets in Resources */,
 				EDD6302D27589F60005C9C60 /* Main.storyboard in Resources */,
 			);
@@ -203,6 +253,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		985885EC67A49A0841999F30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xnote/Pods-Xnote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D4B1AD9E86D7AB496B3F4FB4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,14 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9AFB2F275D29730067428C /* TableHomeViewController.swift in Sources */,
 				EDF011C42759D7FA003A5477 /* InfoViewController.swift in Sources */,
 				EDD6303027589F60005C9C60 /* Xnote.xcdatamodeld in Sources */,
 				EDD6302A27589F60005C9C60 /* ViewController.swift in Sources */,
+				ED9AD960275E4295005E7A1A /* Usuarios.swift in Sources */,
 				EDD6302627589F60005C9C60 /* AppDelegate.swift in Sources */,
 				EDF011C22759D79D003A5477 /* SideMenu.swift in Sources */,
 				EDF011C62759D897003A5477 /* SettingViewController.swift in Sources */,
+				ED0ED88A275C3EA300220B74 /* CollectionTableViewCell.swift in Sources */,
 				EDD6302827589F60005C9C60 /* SceneDelegate.swift in Sources */,
+				ED9AFB31275D30420067428C /* Models.swift in Sources */,
+				ED9AFB2D275D26A90067428C /* TableCollectionViewCell.swift in Sources */,
+				ED9AD962275E42CA005E7A1A /* Categorias.swift in Sources */,
 				ED27DED827595DEE00D673D1 /* AuthViewController.swift in Sources */,
+				ED9AFB2B275D20050067428C /* ListaTareaPendiente.swift in Sources */,
 				ED27DEDA2759821900D673D1 /* HomeViewController.swift in Sources */,
 				ED27DED42759569D00D673D1 /* NameViewController.swift in Sources */,
 			);

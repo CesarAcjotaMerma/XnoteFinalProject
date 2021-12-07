@@ -16,7 +16,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         btnComenzar.layer.cornerRadius = 30.0
     }
-    
-
 }
-
