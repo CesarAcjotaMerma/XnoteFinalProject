@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Usuario{
+    var nombre = ""
+    var email = ""
+    var uid = ""
+}

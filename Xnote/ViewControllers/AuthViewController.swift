@@ -9,15 +9,18 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseDatabase
 
 class AuthViewController: UIViewController, GIDSignInDelegate {
     
     @IBOutlet weak var btnGoogle: UIButton!
+    @IBOutlet weak var btnCrearUsuario: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         btnGoogle.layer.cornerRadius = 30.0
+        btnCrearUsuario.layer.cornerRadius = 30.0
         
         //Google auth
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -55,8 +58,18 @@ class AuthViewController: UIViewController, GIDSignInDelegate {
             if error != nil {
                 self.alert(title: "Fallo en login", message: "Por favor intente nuevamente mas tarde")
             }else{
-                self.alert(title: "Login Exitoso", message: "Login successsfull complete")
-                self.performSegue(withIdentifier: "loginGoogle", sender: nil)
+                
+               let uid = (Auth.auth().currentUser!.uid)
+               let nombre = (Auth.auth().currentUser!.displayName)
+               let email = (Auth.auth().currentUser!.email)
+               
+               let usuario = ["nombre": nombre, "email" : email];
+                Database.database().reference().child("usuarios").child(uid).child("datos").setValue(usuario)
+                
+               self.alert(title: "Login Exitoso", message: "Login successsfull complete")
+               self.performSegue(withIdentifier: "loginGoogle", sender: nil)
+            
+                }
             }
         }
     }
@@ -83,7 +96,7 @@ class AuthViewController: UIViewController, GIDSignInDelegate {
     }
     */
 
-}
+
 //
 //extension AuthViewController: GIDSignInDelegate {
 //    

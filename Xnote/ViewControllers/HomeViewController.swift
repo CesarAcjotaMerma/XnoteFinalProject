@@ -17,14 +17,9 @@ class HomeViewController: UIViewController, MenuControllerDelegate{
 
     private var sideMenu: SideMenuNavigationController?
     
-    private let table: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
-    
     private let infoController = InfoViewController()
     private let settingController = SettingViewController()
+    private let pomodoroController = PomodoroViewController()
     
     @IBOutlet weak var emailUser: UILabel!
     
@@ -34,15 +29,26 @@ class HomeViewController: UIViewController, MenuControllerDelegate{
     
     @IBOutlet weak var btnAdCategoria: UIButton!
     
+    var tareas:[Tarea] = []
+    
+    var listTareas: Tarea?
+    var listCategorias: Categoria?
+    
+    var usuarios:[Usuario] = []
+    
+    var usuario = Usuario()
+    
+    var name = ""
+    var descript = ""
+    
     var usuarioId = (Auth.auth().currentUser!.uid)
     var usuarioName = (Auth.auth().currentUser!.displayName)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.addSubview(table)
-//        table.delegate = self
-//        table.dataSource = self
+        emailUser.text = "HOLA,\(usuarioName ?? "Amig@")"
+        fraseBienvenida.text = "Bienvenid@ a Xnote, disfruta de la App"
         
         let menu = MenuController(with:SideMenuItem.allCases)
         // side menu
@@ -51,12 +57,22 @@ class HomeViewController: UIViewController, MenuControllerDelegate{
         sideMenu?.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
-        addChildControllers()
+        //addChildControllers()
         
         //recepcion de datos del usuario
+        //guard let auth = user.authentication else{ return }
         
-        emailUser.text = "HOLA,\(Auth.auth().currentUser!.displayName!)"
-        fraseBienvenida.text = "Bienvenid@ a Xnote, disfruta de la App"
+    Database.database().reference().child("usuarios").child((Auth.auth().currentUser?.uid)!).child("datos").observe(DataEventType.childAdded, with: {(snapshot) in
+        
+        print(snapshot)
+        
+//        let usuario = Usuario()
+//        usuario.nombre = (snapshot.value as! NSDictionary)["nombre"] as! String
+//        usuario.email = (snapshot.value as! NSDictionary)["email"] as! String
+//        self.usuarios.append(usuario)
+        //self.collectionView.reloadData()
+
+    })
         
         //Button Add Category
         btnAdCategoria.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
@@ -95,37 +111,24 @@ class HomeViewController: UIViewController, MenuControllerDelegate{
             }
             let categoryField = fields[0]
             let descriptionField = fields[1]
-            guard let categoryName = categoryField.text, !categoryName.isEmpty,
-                let description = descriptionField.text else{
+            guard let nombre = categoryField.text, !nombre.isEmpty,
+                let descripcion = descriptionField.text else{
                     print("Invalid entries")
                     return
             }
-            print("Email \(categoryName)")
-            print("Description \(description)")
+            print("Nombre \(nombre)")
+            print("Descripcion \(descripcion)")
             
-            Database.database().reference().child("usuarios").child(self.usuarioId).child("categorias").childByAutoId().setValue(categoryName)
+//            let tasks:[Tarea] = []
+//            let task = Tarea?.self
+            
+            let categoria = ["nombre": nombre, "descripcion" : descripcion]
+            Database.database().reference().child("usuarios").child(self.usuarioId).child("categorias").childByAutoId().setValue(categoria)
+            
+            //self.navigationController?.popViewController(animated: true)
             
         }))
         present(alert, animated: true)
-    }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        table.frame = view.bounds
-//    }
-    
-    private func addChildControllers(){
-        addChild(settingController)
-        addChild(infoController)
-        view.addSubview(settingController.view)
-        view.addSubview(infoController.view)
-        
-        settingController.view.frame = view.bounds
-        infoController.view.frame = view.bounds
-        settingController.didMove(toParent: self)
-        infoController.didMove(toParent: self)
-        settingController.view.isHidden = true
-        infoController.view.isHidden = true
     }
     
     @IBAction func didTapMenuButton(){
@@ -133,37 +136,49 @@ class HomeViewController: UIViewController, MenuControllerDelegate{
         
     }
     
-    func didTapLogoutButton(){
+    @IBAction func didTapLogoutButton(){
         
         do {
            try Auth.auth().signOut()
-           navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+           //navigationController?.popViewController(animated: true)
         } catch {
                // se ha producido error
         }
-//
-//        GIDSignIn.sharedInstance()?.signOut()
-//
-//        try! Auth.auth().signOut()
-//
-//        dismiss(animated: true, completion: nil)
     }
+    
     
     func didSelectMenuItem(named: SideMenuItem) {
         sideMenu?.dismiss(animated: true, completion: nil)
             title = named.rawValue
             
             switch named {
-            case .home:
+            case .inicio:
                 settingController.view.isHidden = true
                 infoController.view.isHidden = true
-            case .info:
-                performSegue(withIdentifier: "infoScreen", sender: nil)
-                //settingController.view.isHidden = true
-                //infoController.view.isHidden = false
-            case .setting:
-               didTapLogoutButton()
+            case .categoria:
+               guard let vc = storyboard?.instantiateViewController(identifier: "listacategoria") as? ListCategoriasViewController else {
+                   return
+               }
+               navigationController?.pushViewController(vc,animated: true)
+            case .ajustes:
+                guard let vc = storyboard?.instantiateViewController(identifier: "configuracioens") as? SettingViewController else {
+                    return
+                }
+                navigationController?.pushViewController(vc,animated: true)
             }
+    }
+    
+    func moveOnCarategoryDetail (cindex: Int) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "ListNotesViewController") as? ListNotesViewController
+            else{
+                return
+        }
+        //let tareas:[Categoria] = []
+        
+        //vc.tareasListing = tareas[cindex]
+        //vc.listTareas = listCategorias![cindex]
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
@@ -179,50 +194,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("HOOLA \(indexPath.row)")
-        if indexPath.row < 1{
+        if indexPath.row < 2{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell", for: indexPath) as? CollectionTableViewCell else {fatalError("Unable to create explore table view Cell")}
-            print("HOOLA \(indexPath.row)")
+            cell.didSelectClosure = { celIndex in
+                if let celIndexp = celIndex {
+                    self.moveOnCarategoryDetail(cindex: celIndexp)
+                }
+            }
             return cell
         }
-        if indexPath.row > 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListaTareaPendiente", for: indexPath) as? ListaTareaPendiente else {fatalError("Unable to create explore table view Cell")}
-            print("HOOLA HIJO DE PUTA \(indexPath.row)")
-            return cell
-        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell", for: indexPath)
         
-           cell.textLabel?.text = "No hay Elementos para Mostrar"
-           
         return cell
     }
+    
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 180
     }
 }
-
-//extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        cell.textLabel?.text = "Hello World"
-//        
-//        return cell
-//    }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 50
-//    }
-//}
